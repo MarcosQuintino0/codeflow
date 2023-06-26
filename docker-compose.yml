@@ -1,0 +1,33 @@
+version: '3'
+
+services:
+  frontend:
+    build:
+      context: ./frontend
+    container_name: codeflow-frontend4
+    depends_on:
+      - backend
+    ports:
+      - "4200:80"
+
+  backend:
+    build:
+      context: ./backend
+    container_name: codeflow-backend4
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/postgres
+      - SPRING_DATASOURCE_USERNAME=bugsolver-postgres
+      - SPRING_DATASOURCE_PASSWORD=bugsolver-postgres
+    ports:
+      - '8080:8080'
+    depends_on:
+      - postgres_db
+  
+  postgres_db:
+    image: 'postgres:15.0-alpine'
+    container_name: banco_postgres4
+    environment:
+      - POSTGRES_USER=bugsolver-postgres
+      - POSTGRES_PASSWORD=bugsolver-postgres
+    ports:
+      - "5432:5432"

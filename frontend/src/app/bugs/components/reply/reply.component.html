@@ -1,0 +1,107 @@
+<div class="container p-3 bg-white">
+    <div class="card mb-2" [ngClass]="{'border-success': reply.bestAnswer}" *ngFor="let reply of pageReply.content | paginate : {
+        currentPage: pageReply.page,
+        itemsPerPage: pageReply.size,
+        totalItems: pageReply.totalElements
+    }">
+        <div class="ml-2 mt-1 mb-1 mr-1">
+            <span>
+                <button onmouseenter="$(this).tooltip('show')" data-toggle="tooltip" data-placement="top" title="{{'REPLY.DELETE' | translate}}" (click)="setReplyToDeleteId(reply.id!!)" *ngIf="isAnswerOwner.get(reply.id!!)" type="button" class="btn btn-danger btn-sm float-right ml-2" data-toggle="modal" data-target="#deleteAnswerModal">
+                    <i class="fa fa-trash "></i>
+                </button>
+                <button onmouseenter="$(this).tooltip('show')" data-toggle="tooltip" data-placement="top" title="{{'REPLY.EDIT' | translate}}" (click)="setReplyToEditId(reply.id!!); setDefaultEditField(reply.description);" *ngIf="isAnswerOwner.get(reply.id!!)" type="button" class="btn btn-info btn-sm float-right ml-2">
+                    <i class="fa fa-pencil "></i>
+                </button>
+                <button onmouseenter="$(this).tooltip('show')" data-toggle="tooltip" data-placement="top" title="{{'REPLY.SELECT-BEST-ANSWER' | translate}}" (click)="setBestAnswerId(reply.id!!)" *ngIf="isPostOwner" type="button" class="btn btn-success btn-sm float-right ml-2" data-toggle="modal" data-target="#bestAnswerModal">
+                    <i class="fa fa-check "></i>
+                </button>
+            </span>
+            <span class="text-muted small">{{"REPLY.ANSWERED-BY-TEXT" | translate}}: </span>
+            <span class="small">{{reply.user.username}}</span>
+            <span class="text-muted small ml-4">{{"REPLY.ANSWERED-AT-TEXT" | translate}}: </span>
+            <span class="small">{{reply.createdAt | date: "dd/MM/yyyy HH:mm"}}</span>
+        </div>
+        <hr style="margin:0px; padding:0px;">
+        <div class="card-body" *ngIf="replyToEditId != reply.id!!" [innerHTML]="convertReplyDescriptionToHtml(reply.description)">
+        </div>
+        <div class="card-body align-items-center text-center" *ngIf="replyToEditId == reply.id!!">
+            <form [formGroup]="editReplyForm">
+                <textarea class="form-control" formControlName="description" class="w-100" oninput="this.style.height = ''; this.style.height = this.scrollHeight +'px'"></textarea>
+
+                <button class="btn btn-primary" type="submit" (click)="updateReply(reply.id!!); setReplyToEditId(-1);">
+                    <span>{{'REPLY.EDIT' | translate}}</span>
+                </button>
+            </form>
+        </div>
+    </div>
+    <div *ngIf="pageReply.totalElements == 0" class="justify-content-center m-4">
+        <p class="text-center lead text-muted">{{'REPLY.NO-ANSWER-FOUND' | translate}}</p>
+    </div>
+
+    <div class="d-flex justify-content-center mt-4 mr-4">
+        <pagination-controls class="pagination-control text-center text-dark" 
+        previousLabel = "{{'PAGINATION.PREVIOUS-LABEL' | translate}}"
+        nextLabel = "{{'PAGINATION.NEXT-LABEL' | translate}}"
+        (pageChange)="getRepliesByPage($event)"></pagination-controls>
+    </div>
+</div>
+
+<div *ngIf="isAuthenticated" class="container p-3 mt-2 text-center bg-white">
+    <p class="lead">{{'REPLY.SEND-ANSWER-TITLE' | translate}}</p>
+    <form [formGroup]="replyForm">
+        <div class="form-group">
+            <textarea onmouseenter="$(this).tooltip('show')" onkeydown="$(this).tooltip('hide')" data-toggle="tooltip" data-placement="right" title="{{'BUG.EXPLAIN-CODE-FORMATIING' | translate}}" id="description" class="form-control" formControlName="description" oninput="this.style.height = ''; this.style.height = this.scrollHeight +'px'"></textarea>
+        </div>
+        <div class="align-items-center text-center">
+            <button class="btn btn-primary" type="submit" (click)="createNewReply()">
+                <span>{{'REPLY.SUBMIT' | translate}}</span>
+            </button>
+        </div>
+    </form>
+</div>  
+<div *ngIf="!isAuthenticated" class="mt-4 text-center text-white">
+    <h4>{{'REPLY.MUST-AUTHENTICATE' | translate}}</h4>
+</div>
+
+<!-- Best answer confirmation modal -->
+<div class="modal fade" id="bestAnswerModal" tabindex="-1" role="dialog" aria-labelledby="bestAnswerModal" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">{{'REPLY.BEST-ANSWER.TITLE' | translate}}</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <p>{{'REPLY.BEST-ANSWER.DESCRIPTION' | translate}}</p>
+            <p>{{'REPLY.BEST-ANSWER.OBS' | translate}}</p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">{{'BUG.BUTTON-CLOSE-MODAL' | translate}}</button>
+            <button (click)="setBestAnswer()" type="button" class="btn btn-success" data-dismiss="modal">{{'BUG.BUTTON-CONFIRM-MODAL' | translate}}</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!-- Answer delete modal -->
+<div class="modal fade" id="deleteAnswerModal" tabindex="-1" role="dialog" aria-labelledby="deleteAnswerModal" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">{{'BUG.DELETE-TITLE' | translate}}</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <p>{{'REPLY.DELETE-ANSWER-DESCRIPTION' | translate}}</p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">{{'BUG.BUTTON-CLOSE-MODAL' | translate}}</button>
+            <button (click)="deleteReply()" type="button" class="btn btn-danger" data-dismiss="modal">{{'BUG.BUTTON-DELETE-MODAL' | translate}}</button>
+        </div>
+      </div>
+    </div>
+</div>

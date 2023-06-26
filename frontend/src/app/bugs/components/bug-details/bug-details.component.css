@@ -1,0 +1,7 @@
+:host ::ng-deep .ngx-pagination li a{
+    color:black !important;
+}
+
+:host ::ng-deep .ngx-pagination a:hover, .ngx-pagination button{
+    background-color: lightgray !important;
+}

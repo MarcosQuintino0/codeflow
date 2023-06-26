@@ -1,0 +1,124 @@
+{
+    "HOME-PAGE":{
+        "EXPLORE": "Comece a Explorar",
+        "DESCRIPTION":"Desenvolva seu código da melhor forma",
+        "DESCRIPTION-2": "Junte-se a uma das maiores comunidades voltada a refatoração e resolução de bugs!",
+        "TOTAL-USERS": "Total de Usuários",
+        "TOTAL-BUGS-SOLVED": "Bugs Resolvidos"
+    },
+
+    "PAGINATION":{
+        "PREVIOUS-LABEL": "Anterior",
+        "NEXT-LABEL": "Próximo"
+    },
+
+    "FORM_VALIDATIONS":{
+        "REQUIRED": "O campo não pode ser vazio.",
+        "PASSWORD_MIN_LENGTH": "Senha deve ter no mínimo 8 caracteres.",
+        "INVALID_EMAIL":"E-mail inválido.",
+        "MATCH_PASSWORD": "As senhas não coincidem."
+    },
+
+    "NAVBAR":{
+        "EXPLORE": "Explorar",
+        "WELCOME_LOGGED_USER_MESSAGE": "Bem-vindo"
+    },
+
+    "LOGIN":{
+        "EMAIL_LABEL":"E-mail",
+        "PASSWORD_LABEL": "Senha",
+        "ENTER_BUTTON_LABEL": "Entrar",
+        "REGISTER_DESCRIPTION":"Não possui uma conta ainda?",
+        "REGISTER_BUTTON_LABEL": "Cadastre-se",
+        "USERNAME_LABEL": "Nome de usuário",
+        "NAME_LABEL": "Nome",
+        "AUTHENTICATED_SUCESSFULLY": "Autenticado com sucesso.",
+        "LOGOUT_SUCESSFULLY":"Logout feito com sucesso."
+    },
+
+    "REGISTER":{
+        "TITLE": "Registrar",
+        "EMAIL_LABEL":"E-mail",
+        "USERNAME_LABEL": "Nome de usuário",
+        "PASSWORD_LABEL": "Senha",
+        "PASSWORD_CONFIRMATION_LABEL": "Confirme a senha",
+        "ENTER_BUTTON_LABEL":"Criar Conta",
+        "LOGIN_BUTTON_LABEL":"Entrar",
+        "LOGIN_DESCRIPTION":"Já possui uma conta?",
+        "REGISTERED_SUCCESSFULLY":"Conta registrada com sucesso. Você já pode fazer o login!"
+    },
+
+    "AUTH":{
+        "SESSION_EXPIRED": "Sessão expirada, por favor entre novamente.",
+        "UNAUTHORIZED-ROUTE": "Faça o login para continuar."
+    },
+    
+    "BUG":{
+        "UPDATE":{
+            "BUTTON-UPDATE": "Salvar",
+            "UPDATE":"Atualizar",
+            "UPDATED-MESSAGE":"Atualizado com sucesso."
+        },
+
+        "CREATE":{
+            "NEW": "Novo Bug",
+            "BUTTON-NEW": "Criar",
+            "CREATED-MESSAGE": "Bug criado com sucesso."
+        },
+        
+        "SEARCH": {
+            "BUTTON": "Buscar"
+        },
+
+        "TITLE-FIELD": "Título",
+        "DESCRIPTION-FIELD":"Descreva seu bug",
+        "EXPLAIN-CODE-FORMATIING": "Para inserir um trecho de código, insira o código entre três aspas invertidas.\n Exemplo: ``` [código] ```",
+        "BUTTON-CONFIRM-MODAL": "Confirmar",
+        "BUTTON-DELETE-MODAL": "Deletar",
+        "BUTTON-CLOSE-MODAL": "Fechar",
+        "DELETE-TITLE": "Confirmar exclusão",
+        "DELETE-DESCRIPTION": "Tem certeza que deseja excluir o post?",
+        "DELETED-SUCCESSFULLY": "Excluido com sucesso.",
+        "CREATE-NEW-BUTTON":"Criar Novo",
+        "CREATED-BY-TEXT":"Criado por",
+        "CREATED-AT-TEXT":"Criado em",
+        "SEE-CODE":"Ver código",
+        "SEE-OWN-BUGS":"Meus bugs",
+        "NO-BUG-FOUND": "Nenhum bug encontrado.",
+        "EDIT": "Editar",
+        "REMOVE": "Excluir"
+    },
+
+    "REPLY":{
+        "BEST-ANSWER": {
+            "TITLE": "Confirmar escolha de melhor resposta",
+            "DESCRIPTION":"Deseja escolher essa resposta como a melhor resposta?",
+            "OBS":"Obs: Caso já exista uma outra resposta escolhida, ela será substituida.",
+            "UPDATED-SUCCESSFULLY": "Resposta atualizada com sucesso."
+        },
+        "MUST-AUTHENTICATE": "Você deve estar autenticado para responder.",
+        "NO-ANSWER-FOUND": "Nenhuma resposta encontrada.",
+        "SEND-ANSWER-TITLE": "Enviar nova resposta",
+        "SELECT-BEST-ANSWER": "Selecionar como melhor resposta",
+        "TITLE": "Respostas",
+        "ANSWERED-BY-TEXT":"Respondido por",
+        "ANSWERED-AT-TEXT":"Respondido em",
+        "CREATED": "Resposta criada com sucesso",
+        "EDIT": "Editar",
+        "SUBMIT":"Enviar",
+        "DELETE": "Excluir resposta",
+        "DELETE-ANSWER-DESCRIPTION": "Tem certeza que deseja excluir a resposta?",
+        "DELETED-SUCCESSFULLY": "Resposta excluída com sucesso",
+        "UPDATED-SUCCESSFULLY": "Resposta atualizada com sucesso"
+    },
+
+    "CATEGORY":{
+        "DESCRIPTION-FIELD":"Selecione as categorias",
+        "SEARCH":"Buscar",
+        "NOT-FOUND": "Nenhuma categoria encontrada."
+    },
+
+    "SEARCH":{
+        "BAR":"Buscar por título"
+    }
+}

@@ -1,0 +1,123 @@
+{
+    "HOME-PAGE":{
+        "EXPLORE": "Begin to Explore",
+        "DESCRIPTION":"Develop your code in the best way possible!",
+        "DESCRIPTION-2": "Join one of the largest bug fixing and refactoring communities!",
+        "TOTAL-USERS": "Total Users",
+        "TOTAL-BUGS-SOLVED": "Bugs Solved"
+    },
+
+    "PAGINATION":{
+        "PREVIOUS-LABEL": "Previous",
+        "NEXT-LABEL": "Next"
+    },
+
+    "FORM_VALIDATIONS":{
+        "REQUIRED": "Field can't be empty.",
+        "PASSWORD_MIN_LENGTH": "Password must have at least 8 characters.",
+        "INVALID_EMAIL":"Invalid email.",
+        "MATCH_PASSWORD": "Passwords do not match."
+    },
+
+    "NAVBAR":{
+        "EXPLORE": "Explore",
+        "WELCOME_LOGGED_USER_MESSAGE": "Welcome"
+    },
+
+    "LOGIN":{
+        "EMAIL_LABEL":"Email",
+        "PASSWORD_LABEL": "Password",
+        "ENTER_BUTTON_LABEL": "Enter",
+        "REGISTER_DESCRIPTION":"Don't have an account yet?",
+        "REGISTER_BUTTON_LABEL": "Register",
+        "USERNAME_LABEL": "Username",
+        "NAME_LABEL": "Name",
+        "AUTHENTICATED_SUCESSFULLY": "Authenticated successfully",
+        "LOGOUT_SUCESSFULLY":"Logout successfully"
+    },
+
+    "REGISTER":{
+        "TITLE": "Register",
+        "EMAIL_LABEL":"Email",
+        "USERNAME_LABEL": "Username",
+        "PASSWORD_LABEL": "Password",
+        "PASSWORD_CONFIRMATION_LABEL": "Confirm password",
+        "ENTER_BUTTON_LABEL":"Create account",
+        "LOGIN_BUTTON_LABEL":"Enter",
+        "LOGIN_DESCRIPTION":"Already have an account?",
+        "REGISTERED_SUCCESSFULLY":"Account registered sucessfully, you can now login."
+    },
+
+    "AUTH":{
+        "SESSION_EXPIRED": "Session expired, please login again.",
+        "UNAUTHORIZED-ROUTE": "Please login to continue."
+    },
+    
+    "BUG":{
+        "UPDATE":{
+            "BUTTON-UPDATE": "Update",
+            "UPDATE":"Update",
+            "UPDATED-MESSAGE":"Updated successfully"
+        },
+
+        "CREATE":{
+            "NEW": "New Bug",
+            "BUTTON-NEW": "New",
+            "CREATED-MESSAGE": "Bug created sucessfully."
+        },
+        
+        "SEARCH": {
+            "BUTTON": "Search"
+        },
+
+        "TITLE-FIELD": "Title",
+        "DESCRIPTION-FIELD":"Describe your bug",
+        "EXPLAIN-CODE-FORMATIING": "To insert a code snippet, insert code between three back quotes.\n Exemple: ``` [CODE] ```",
+        "BUTTON-CONFIRM-MODAL": "Confirm",
+        "BUTTON-DELETE-MODAL": "Delete",
+        "BUTTON-CLOSE-MODAL": "Close",
+        "DELETE-TITLE": "Confirm Deletion",
+        "DELETE-DESCRIPTION": "Are you sure that you want delete that post?",
+        "DELETED-SUCCESSFULLY": "Deleted successfully.",
+        "CREATE-NEW-BUTTON":"Create New",
+        "CREATED-BY-TEXT":"Created by",
+        "CREATED-AT-TEXT":"Created at",
+        "SEE-CODE":"See code",
+        "SEE-OWN-BUGS":"My bugs",
+        "NO-BUG-FOUND": "No bug found.",
+        "EDIT": "Edit",
+        "REMOVE": "Delete"
+    },
+
+    "REPLY":{
+        "BEST-ANSWER": {
+            "TITLE": "Confirm best answer choice",
+            "DESCRIPTION":"Do you want to choose this answer as the best answer?",
+            "OBS":"Obs: If a best answer already exists, it will be replaced."
+        },
+        "MUST-AUTHENTICATE": "You must be authenticated to reply.",
+        "NO-ANSWER-FOUND": "No answer found.",
+        "SEND-ANSWER-TITLE": "Submit New Answer",
+        "SELECT-BEST-ANSWER": "Select as best answer",
+        "TITLE": "Answers",
+        "ANSWERED-BY-TEXT":"Answered by",
+        "ANSWERED-AT-TEXT":"Answered at",
+        "CREATED": "Answer created sucessfully.",
+        "EDIT": "Edit",
+        "SUBMIT":"Submit",
+        "DELETE": "Delete answer",
+        "DELETE-ANSWER-DESCRIPTION": "Are you sure that you want delete the answer?",
+        "DELETED-SUCCESSFULLY": "Answer deleted successfully.",
+        "UPDATED-SUCCESSFULLY": "Answer updated successfully."
+    },
+
+    "CATEGORY":{
+        "DESCRIPTION-FIELD":"Select categories",
+        "SEARCH":"Search",
+        "NOT-FOUND": "No categories found."
+    },
+    
+    "SEARCH":{
+        "BAR":"Find by title"
+    }
+}

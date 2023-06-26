@@ -1,0 +1,45 @@
+<div class="root d-flex align-items-center min-vh-100" id="root-background-div">
+  <img class="custom-image" src="./assets/logo/Authentication-rafiki.png">
+  <div class="card">
+    <div class="card-body pl-4 pr-4">
+      <h1 class="display text-center mb-4" id="register-title">{{'REGISTER.TITLE' | translate}}</h1>
+      <form id="register-form" [formGroup]="form">
+        <div class="form-group">
+          <input id="username" class="form-control" type="text" formControlName="username" placeholder="{{'REGISTER.USERNAME_LABEL' | translate}}">
+          <div class="small" id="error-message" *ngIf="hasError('username')">
+            {{ getMessageError('username') }}
+          </div>
+        </div>
+        <div class="form-group">
+          <input id="email" class="form-control" type="text" formControlName="email" placeholder="{{'REGISTER.EMAIL_LABEL' | translate}}">
+          <div class="small" id="error-message" *ngIf="hasError('email')">
+            {{ getMessageError('email') }}
+          </div>
+        </div>
+        <div class="form-group">
+          <input id="password" class="form-control" type="password" formControlName="password" placeholder="{{'REGISTER.PASSWORD_LABEL' | translate }}">
+          <div class="small" id="error-message" *ngIf="hasError('password')">
+            {{ getMessageError('password') }}
+          </div>
+        </div>
+        <div class="form-group">
+          <input id="password-confirm" class="form-control" type="password" formControlName="confirmPassword" placeholder="{{'REGISTER.PASSWORD_CONFIRMATION_LABEL' | translate }}">
+          <div class="small" id="error-message" *ngIf="hasError('confirmPassword')">
+            {{ getMessageError('confirmPassword') }}
+          </div>
+        </div>
+        <div class="mb-3">
+          <button class="w-100 btn btn-block" id="register-button" [disabled]="loading" type="submit" (click)="register()">
+            <span *ngIf="!loading">{{'REGISTER.ENTER_BUTTON_LABEL' | translate}}</span>
+            <span *ngIf="loading" class="spinner-border spinner-border-sm" role="status"></span>
+          </button>
+        </div>
+        <hr>
+        <p class="text-center small" style="margin-bottom:5px;" >{{'REGISTER.LOGIN_DESCRIPTION' | translate}}</p>
+        <div>
+          <button class="w-100 btn btn-block" id="login-button" routerLink="/user/login">{{'REGISTER.LOGIN_BUTTON_LABEL' | translate}}</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

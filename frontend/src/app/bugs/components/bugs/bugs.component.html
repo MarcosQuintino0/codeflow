@@ -1,0 +1,65 @@
+<div class="root justify-content-center min-vh-100 p-4" id="root-background-div">
+  <div>
+    <form class="form-inline" [formGroup]="form">
+      <input class="form-control mr-sm-2" style="width:40%" type="search" placeholder="{{'SEARCH.BAR' | translate}}" aria-label="Search" formControlName="title">
+      <ng-multiselect-dropdown class=" mr-sm-2 select-tags multiselect-dropdown" style="width:25%"
+      formControlName="categories"
+      placeholder="{{'CATEGORY.DESCRIPTION-FIELD' | translate}}"
+      [(ngModel)]="selectedCategories"
+      [settings]="categoriesDropdownSettings"
+      [data]="categoriesList"
+      ></ng-multiselect-dropdown>
+      <button class="btn my-2 my-sm-0 btn-submit" type="submit" (click)="getBugsByFilter(false)">
+        <span>{{'BUG.SEARCH.BUTTON' | translate}}</span>
+        <i class="fa-solid fa-xs fa-search ml-1" ></i>
+      </button>
+      
+      <button class="btn btn-primary ml-auto" *ngIf="isAuthenticated" type="button" (click)="getBugsByFilter(true)">
+        <span>{{"BUG.SEE-OWN-BUGS" | translate}}</span>
+        <i class="fa-solid fa-bug fa-xs ml-1" ></i>
+      </button>
+      
+      <button class="btn btn-primary" [ngClass]="{'ml-2':isAuthenticated, 'ml-auto': !isAuthenticated}" type="button" routerLink="/bugs/new">
+        <span>{{"BUG.CREATE-NEW-BUTTON" | translate}}</span>
+        <i class="fa-solid fa-plus fa-xs ml-1" ></i>
+      </button>
+    </form>
+  </div>
+
+  <div class="mt-2 mw-100 min-vh-100 p-4 container" style="background-color: rgba(40, 40, 40, 0.40); ">
+    <div class="row">
+      <div class="col-sm-4 mt-4" *ngFor="let bug of pageConfig.content | paginate: {
+        currentPage: pageConfig.page,
+        itemsPerPage: pageConfig.size,
+        totalItems: pageConfig.totalElements
+      }">
+        <div class="card">
+          <div class="card-body text-center">
+            <a class="card-title h5 text-decoration-none" style="color: black" [routerLink]="['/bugs',bug.id]">
+              {{bug.title}}
+            </a>
+          </div>
+          <div class="text-center mb-1" >
+            <span *ngFor="let category of bug.categories" class="badge badge-pill ml-1" style="background-color:rgb(49, 173, 0); color: white">
+              {{category.name}}
+            </span>
+          </div>
+          <div class="card-footer text-muted" style="padding: 3px !important;">
+            <small>{{"BUG.CREATED-AT-TEXT" | translate}}: {{bug.createdAt | date: "dd/MM/yyyy HH:mm"}}</small> 
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="pageConfig.totalElements == 0" class="justify-content-center">
+      <p class="text-center h3" style="color:white;">{{'BUG.NO-BUG-FOUND' | translate}}</p>
+    </div>
+  </div>
+  
+  <div class="d-flex justify-content-center mt-2">
+    <pagination-controls class="pagination-control" 
+    previousLabel = "{{'PAGINATION.PREVIOUS-LABEL' | translate}}"
+    nextLabel = "{{'PAGINATION.NEXT-LABEL' | translate}}"
+    (pageChange)="getBugsByPage($event)"></pagination-controls>
+  </div>
+</div>

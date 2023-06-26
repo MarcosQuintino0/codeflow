@@ -1,0 +1,53 @@
+#div-card-body input, #div-card-body button{
+    font-family:'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+#error-message{
+    color: red;
+}
+
+a{
+    font-family:'Roboto', sans-serif;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+#login-title{
+    font-weight: 100;
+}
+::-webkit-input-placeholder {
+    font-size:15px;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+    font-size:15px;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+    font-size:15px;
+}
+
+:-ms-input-placeholder {  
+    font-size:15px;
+}
+
+#login-button{
+    color: white;
+    background-color: #17B169;
+}
+
+#login-button:hover{
+    background-color: #1ac474;
+}
+
+#register-button{
+    border: 2px solid  #17B169;
+}
+
+#register-button:hover{
+    color:white;
+    background-color: #17B169;
+}
+
+

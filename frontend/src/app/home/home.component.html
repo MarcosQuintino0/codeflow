@@ -1,0 +1,25 @@
+<div class="root justify-content-center text-left min-vh-100 d-flex" id="root-background-div">
+  <div class="container" style="padding-top: 100px">
+      <div class="row">
+          <div class="col-12 col-md-6 mb-2 d-flex align-items-center" style="margin-left: 0;">
+              <div class="d-flex align-items-center">
+                 <div>
+                      <p class="display-3 mb-2 text-white font-weight-bold text-transition-main">{{'HOME-PAGE.DESCRIPTION' | translate}}</p>
+                      <h1 class="lead mb-4 text-white text-left text-transition-secondary">{{'HOME-PAGE.DESCRIPTION-2' | translate}}</h1>
+                      <hr class="line-transition">
+                      <button class="btn btn-lg btn-block mt-4 btn-explore button-transition" routerLink="/bugs">
+                          <span>{{'HOME-PAGE.EXPLORE' | translate}}</span>
+                      </button>
+                  </div>
+              </div>
+          </div>
+          <div class="col-12 col-md-6 text-right mb-2" style="padding-top:100px">
+              <p class="h2 mb-2 text-white font-weight-bold total-count-transition">{{'HOME-PAGE.TOTAL-USERS' | translate}}</p>
+              <p class="h3 mb-4 text-white total-count-transition">{{totalUsers}}</p>
+              <p class="h2 mb-2 text-white font-weight-bold total-count-transition">{{'HOME-PAGE.TOTAL-BUGS-SOLVED' | translate }}</p>
+              <p class="h3 mb-2 text-white total-count-transition">{{totalBugsSolved}}</p>
+          </div>
+      </div>
+  </div>
+  <div></div>
+</div>

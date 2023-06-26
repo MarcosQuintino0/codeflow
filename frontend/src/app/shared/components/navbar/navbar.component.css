@@ -1,0 +1,51 @@
+:root{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+nav {
+  background-color: #191E29;
+}
+
+.nav-item{
+    color: rgb(255, 255, 255);
+}
+
+a, p {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+a:hover{
+    color: #01c38D;
+}
+
+.languages button{
+    vertical-align: middle;
+    border: none;
+    background-color: transparent;
+}
+
+.languages img {
+    width: 2rem;
+}
+
+.languages .language-options {
+    display: none;
+    flex-direction: column;
+}
+
+.languages .language-options img {
+    margin-block: 4px;
+}
+
+.languages:hover .language-options{
+    display: flex;
+}
+
+#welcome-name{
+    cursor: default;
+    pointer-events: none;
+    color: white;
+    font-family:'Courier New', Courier, monospace;
+}

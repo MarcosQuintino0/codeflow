@@ -1,0 +1,16 @@
+#footer-text{
+  font-family:'Courier New', Courier, monospace;
+  color:white;
+}
+
+span{
+  font-size: x-small;
+}
+
+#footer-div{
+  background-color: rgb(20, 20, 20);
+}
+
+a{
+  text-decoration: none;
+}

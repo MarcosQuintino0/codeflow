@@ -1,0 +1,82 @@
+#div-card-body input, #div-card-body button{
+  font-family:'Roboto', sans-serif;
+  font-weight: 300;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 100vh;
+}
+.custom-image {
+width: 700px;
+height: 700px;
+margin-right: 100px;
+}
+
+.card {
+display: flex;
+background-color: #fff;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+padding: 20px;
+margin: 0 auto;
+max-width: 500px;
+}
+
+@media (max-width: 576px) {
+.card {
+  max-width: 100%;
+}
+}
+.custom-image {
+max-width: 40%;
+height: auto;
+}
+
+@media (max-width: 1000px) {
+.custom-image {
+  display: none;
+}
+}
+
+
+#error-message{
+  color:red;
+}
+
+#register-title{
+  font-weight: 100;
+}
+
+::-webkit-input-placeholder {
+  font-size:15px;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  font-size:15px;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  font-size:15px;
+}
+
+:-ms-input-placeholder {
+  font-size:15px;
+}
+
+#register-button{
+  color: white;
+  background-color: #17B169;
+}
+
+#register-button:hover{
+  background-color: #1ac474;
+}
+
+#login-button{
+  border: 2px solid  #17B169;
+}
+
+#login-button:hover{
+  color:white;
+  background-color: #17B169;
+}

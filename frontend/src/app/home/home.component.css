@@ -1,0 +1,101 @@
+@keyframes slideInLineFromLeft{
+  0%{
+      width: 0%;
+  }
+  100%{
+      width:100%
+  }
+}
+
+@keyframes slideInFromDown {
+  0% {
+      opacity: 0;
+      transform: translateY(20%);
+  }
+  50%{
+      opacity: 0;
+      transform: translateY(20%);
+  }
+  100% {
+      opacity:1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+      opacity: 0;
+      transform: translateX(10%);
+  }
+  100% {
+      opacity:1;
+      transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+      opacity: 0;
+      transform: translateX(-10%);
+  }
+  100% {
+      opacity:1;
+      transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromLeftWithDelay {
+  0% {
+      opacity: 0;
+      transform: translateX(-10%);
+  }
+  33% {
+      opacity: 0;
+      transform: translateX(-10%);
+  }
+  100% {
+      opacity:1;
+      transform: translateX(0);
+  }
+}
+
+span{
+  font-family:'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+.btn-explore{
+background-color: #01c38D;
+color: white;
+border: none;
+padding: 10px 20px;
+}
+
+.btn-explore:hover{
+  color:white;
+  background-color: #007453;
+}
+
+.background-custom {
+  background-color: #f71d00;
+}
+
+.text-transition-main{
+  animation: 2.5s ease-in-out 0s 1 slideInFromLeft;
+}
+
+.text-transition-secondary{
+  animation: 2.5s ease-in-out 0s 1 slideInFromLeftWithDelay;
+}
+
+.line-transition{
+  animation: 3s ease-in-out 0s 1 slideInLineFromLeft;
+}
+
+.button-transition{
+  animation: 3s ease-in-out 0s 1 slideInFromDown;
+}
+
+.total-count-transition{
+  animation: 3s ease-in-out 0s 1 slideInFromRight
+}

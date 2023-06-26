@@ -1,0 +1,33 @@
+<div class="root d-flex justify-content-center align-items-center min-vh-100" id="root-background-div">
+    <div class="card shadow" >
+        <div class="card-body p-5" id="div-card-body">
+            <h1 class="display text-center mb-4" id="login-title">Login</h1>
+            <form id="login-form" [formGroup]="form">
+                <div class="form-group">
+                    <input id="username" class="form-control" formControlName="username" type="text" placeholder="{{'LOGIN.USERNAME_LABEL' | translate}}">
+                    <div class="small" id="error-message" *ngIf="hasError('username')">
+                        {{ getMessageError('username') }}
+                    </div>
+                </div>
+                
+                <div class="form-group ">
+                    <input id="password" class="form-control" formControlName="password" type="password" placeholder="{{'LOGIN.PASSWORD_LABEL' | translate }}">
+                    <div class="small" id="error-message" *ngIf="hasError('password')">
+                        {{ getMessageError('password') }}
+                    </div>
+                </div>
+                <div class="mb-2">
+                    <button class="w-100 btn btn-block" id="login-button" [disabled]="loading" type="submit" (click)="login()">
+                        <span *ngIf="!loading">{{'LOGIN.ENTER_BUTTON_LABEL' | translate}}</span>
+                        <span *ngIf="loading" class="spinner-border spinner-border-sm" role="status"></span>
+                    </button>
+                </div>
+                <hr>
+                <p class="text-center small" style="margin-bottom:5px;" >{{'LOGIN.REGISTER_DESCRIPTION' | translate}}</p>
+                <div>
+                    <button class="w-100 btn btn-block" id="register-button" routerLink="/user/register">{{'LOGIN.REGISTER_BUTTON_LABEL' | translate}}</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

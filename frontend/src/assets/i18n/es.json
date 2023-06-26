@@ -1,0 +1,123 @@
+{
+    "HOME-PAGE":{
+        "EXPLORE": "Empezar a Explorar",
+        "DESCRIPTION":"¡Desarrolla tu código de la mejor manera posible!",
+        "DESCRIPTION-2": "¡Únase a una de las comunidades más grandes de corrección de errores y refactorización!",
+        "TOTAL-USERS": "Usuários Totais",
+        "TOTAL-BUGS-SOLVED": "Bugs Resolvidos"
+    },
+
+    "PAGINATION":{
+        "PREVIOUS-LABEL": "Anterior",
+        "NEXT-LABEL": "Siguiente"
+    },
+
+    "FORM_VALIDATIONS":{
+        "REQUIRED": "El campo no puede estar vacío.",
+        "PASSWORD_MIN_LENGTH": "La contraseña debe tener al menos 8 caracteres.",
+        "INVALID_EMAIL":"Email no válido.",
+        "MATCH_PASSWORD": "Las contraseñas no coinciden."
+    },
+
+    "NAVBAR":{
+        "EXPLORE": "Explorar",
+        "WELCOME_LOGGED_USER_MESSAGE": "Bienvenido"
+    },
+
+    "LOGIN":{
+        "EMAIL_LABEL":"Email",
+        "PASSWORD_LABEL": "Contraseña",
+        "ENTER_BUTTON_LABEL": "Entrar",
+        "REGISTER_DESCRIPTION":"¿Aún no tienes una cuenta?",
+        "REGISTER_BUTTON_LABEL": "Registrarse",
+        "USERNAME_LABEL": "Nombre de Usuario",
+        "NAME_LABEL": "Nombre",
+        "AUTHENTICATED_SUCESSFULLY": "Autenticado con éxito",
+        "LOGOUT_SUCESSFULLY":"Desconectado con éxito"
+    },
+
+    "REGISTER":{
+        "TITLE": "Registrase",
+        "EMAIL_LABEL":"Email",
+        "USERNAME_LABEL": "Nombre de Usuario",
+        "PASSWORD_LABEL": "Contraseña",
+        "PASSWORD_CONFIRMATION_LABEL": "Confirmar contraseña",
+        "ENTER_BUTTON_LABEL":"Crear cuenta",
+        "LOGIN_BUTTON_LABEL":"Entrar",
+        "LOGIN_DESCRIPTION":"¿Ya tienes una cuenta?",
+        "REGISTERED_SUCCESSFULLY":"Cuenta registrada con éxito, ahora puede iniciar sesión."
+    },
+
+    "AUTH":{
+        "SESSION_EXPIRED": "Sesión caducada, vuelva a iniciar sesión.",
+        "UNAUTHORIZED-ROUTE": "Inicia sesión para continuar."
+    },
+    
+    "BUG":{
+        "UPDATE":{
+            "BUTTON-UPDATE": "Actualizar",
+            "UPDATE":"Actualizar",
+            "UPDATED-MESSAGE":"Actualizado con éxito"
+        },
+
+        "CREATE":{
+            "NEW": "Nuevo Bug",
+            "BUTTON-NEW": "Nuevo",
+            "CREATED-MESSAGE": "Bug creado con éxito."
+        },
+        
+        "SEARCH": {
+            "BUTTON": "Buscar"
+        },
+
+        "TITLE-FIELD": "Título",
+        "DESCRIPTION-FIELD":"Describe tu bug",
+        "EXPLAIN-CODE-FORMATIING": "Para insertar un fragmento de código, inserte el código entre tres comillas invertidas.\n Ejemplo: ``` [CÓDIGO] ```",
+        "BUTTON-CONFIRM-MODAL": "Confirmar",
+        "BUTTON-DELETE-MODAL": "Eliminar",
+        "BUTTON-CLOSE-MODAL": "Cerrar",
+        "DELETE-TITLE": "Confirmar eliminación",
+        "DELETE-DESCRIPTION": "¿Estás seguro de que quieres eliminar esa publicación?",
+        "DELETED-SUCCESSFULLY": "Eliminado con éxito.",
+        "CREATE-NEW-BUTTON":"Crear Nuevo",
+        "CREATED-BY-TEXT":"Creado por",
+        "CREATED-AT-TEXT":"Creado en",
+        "SEE-CODE":"Ver codigo",
+        "SEE-OWN-BUGS":"Mis bugs",
+        "NO-BUG-FOUND": "No se encontró ningún error.",
+        "EDIT": "Editar",
+        "REMOVE": "Eliminar"
+    },
+
+    "REPLY":{
+        "BEST-ANSWER": {
+            "TITLE": "Confirmar mejor opción de respuesta",
+            "DESCRIPTION":"¿Quieres elegir esta respuesta como la mejor respuesta?",
+            "OBS":"Obs: Si ya existe una mejor respuesta, será reemplazada."
+        },
+        "MUST-AUTHENTICATE": "Debes estar autenticado para responder.",
+        "NO-ANSWER-FOUND": "No se encontró respuesta.",
+        "SEND-ANSWER-TITLE": "Enviar nueva respuesta",
+        "SELECT-BEST-ANSWER": "Seleccionar como mejor respuesta",
+        "TITLE": "Respuestas",
+        "ANSWERED-BY-TEXT":"Respondido por",
+        "ANSWERED-AT-TEXT":"Respondido en",
+        "CREATED": "Respuesta creada con éxito.",
+        "EDIT": "Editar",
+        "SUBMIT":"Enviar",
+        "DELETE": "Borrar respuesta",
+        "DELETE-ANSWER-DESCRIPTION": "¿Está seguro de que desea eliminar la respuesta?",
+        "DELETED-SUCCESSFULLY": "Respuesta eliminada con éxito.",
+        "UPDATED-SUCCESSFULLY": "Respuesta actualizada con éxito."
+    },
+
+    "CATEGORY":{
+        "DESCRIPTION-FIELD":"Seleccionar categorías",
+        "SEARCH":"Buscar",
+        "NOT-FOUND": "No se encontraron categorías."
+    },
+    
+    "SEARCH":{
+        "BAR":"Buscar por título"
+    }
+}
